@@ -1,7 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.wrapper {
+    width: 90%; /* Makes the content fit nicely within the screen */
+    max-width: 1200px; /* Prevents excessive stretching on larger screens */
+    margin: 0 auto; /* Center the wrapper */
+    padding: 0 10px; /* Add padding for small devices */
 }
 
 html {
@@ -49,35 +50,37 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 10px 20px;
+    background-color: #231E20;
+    position: relative;
+}
+
+.logo img {
+    max-width: 120px;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 280px;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-links li a {
     font-family: neue-haas-grotesk-display, sans-serif;
-    font-style: normal;
-    font-weight: 100;
-    color: #595556;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 1.2rem;
+    display: flex;
+    list-style: none;
+    gap: 20px;
 }
 
-.nav-links li a:hover {
+.nav-links a {
+    text-decoration: none;
     color: #F0F0F0;
-    text-decoration: underline;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #C2915F;
 }
 
 /* Hamburger Menu Styles */
 .hamburger {
-    display: none; /* Hidden by default */
+    display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
@@ -86,10 +89,9 @@ nav {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: #595556;
+    background: #F0F0F0;
     transition: all 0.3s;
 }
-
 
 .horizontal-line {
     width: 98%;
@@ -267,6 +269,7 @@ nav {
 }
 
 .container h2 {
+    margin-bottom: 0;
     text-align: center;
     padding: 10px 0;
     font-family: neue-haas-grotesk-display, sans-serif;
@@ -817,119 +820,7 @@ footer p {
     }
 }
 
-@media(max-width: 768px) {
-    .nav-links {
-        gap: 100px;
-    }
-
-    .hero{
-        height: 300px;
-    }
-
-    .hero-logo img{
-        width: 200px;
-        height: 200px;
-    }
-
-    .about{
-        margin-top: 0;
-    }
-
-    .about-text h2{
-        font-size: 2.3rem;
-    }
-
-    .about-content img{
-        width: 35%;
-        margin-top: 5%;
-    }
-
-    .about-text p{
-        font-size: 0.7rem;
-    }
-
-    .services{
-        padding: 50px;
-        padding-bottom: 0;
-    }
-
-    .services h2{
-        margin-bottom: 0;
-        font-size: 2.3rem;
-    }
-
-    .service-item-left h3{
-        margin-bottom: 0;
-    }
-
-    .service-item-left {
-        gap: 50px;
-    }
-
-    .service-item-left img {
-        width: 40%;
-        margin-top: 4%;
-    }
-
-    .service-item-left p {
-        font-size: 0.7rem;
-    }
-
-    .service-item h3{
-        margin-bottom: 0;
-    }
-
-    .service-item{
-        gap: 0;
-    }
-
-    .service-item img {
-        width: 40%;
-        margin-top: 3%;
-    }
-
-    .service-item p {
-        font-size: 0.7rem;
-        width: 90%;
-    }
-
-    .gallery{
-        height: 800px;
-        margin-top: 10%;
-    }
-
-    .gallery .container{
-        margin-top: 0;
-    }
-
-    .gallery h2{
-        font-size: 2.3rem;
-        margin: 0;
-    }
-
-    .contact-info h2{
-        margin-left: 20px;
-    }
-
-    .contact-info ul{
-        margin-left: 20px;
-    }
-
-    .contact-info li {
-        font-size: 1rem
-    }
-
-    .footer-container{
-        max-width: 768px;
-    }
-
-    .opening-hours{
-        gap: 10px 15px;
-    }
-
-}
-
-@media (max-width: 425px) {
+@media (max-width: 768px) {
     .logo img {
         width: 50px;
         height: 50px;

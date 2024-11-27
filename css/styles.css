@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -945,14 +951,14 @@ footer p {
     }
 
     .nav-links.active {
-        max-height: 300px; /* Adjust this value based on your content */
-        padding: 10px 0; /* Add padding when menu is visible */
+        max-height: 300px; 
+        padding: 10px 0; 
     }
 
     .nav-links li {
-        text-align: center; /* Center-align links */
-        border-bottom: 1px solid #444; /* Add horizontal line */
-        padding: 8px 0; /* Space between links */
+        text-align: center; 
+        border-bottom: 1px solid #444; 
+        padding: 8px 0; 
     }
 
     .nav-links a {
@@ -964,7 +970,7 @@ footer p {
     }
 
     .hamburger {
-        display: flex; /* Display hamburger menu */
+        display: flex; 
         flex-direction: column;
         cursor: pointer;
         gap: 5px;
@@ -977,13 +983,12 @@ footer p {
         transition: all 0.3s;
     }
 
-    /* Hamburger Animation */
     .hamburger.open span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
 
     .hamburger.open span:nth-child(2) {
-        opacity: 0; /* Hide middle line */
+        opacity: 0; 
     }
 
     .hamburger.open span:nth-child(3) {
@@ -1004,20 +1009,20 @@ footer p {
     }
 
     .about-content {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center-align elements */
-        gap: 20px; /* Add spacing between elements */
+        flex-direction: column;
+        align-items: center; 
+        gap: 20px; 
     }
 
     .about-text {
-        max-width: 90%; /* Make the text span the majority of the screen */
-        margin-left: 0; /* Reset left margin */
-        text-align: center; /* Center-align text */
+        max-width: 90%; 
+        margin-left: 0; 
+        text-align: center; 
     }
 
     .about-content img {
-        width: 80%; /* Make the image wider to fit smaller screens */
-        margin-right: 0; /* Reset right margin */
+        width: 80%; 
+        margin-right: 0; 
     } 
 
     .about-text h2{
@@ -1030,21 +1035,17 @@ footer p {
 
     .service-item-left {
         flex-direction: column;
-        /* Stack image on top */
         align-items: center;
         gap: 0px;
     }
 
     .service-item-left img {
         width: 100%;
-        /* Full width on mobile */
         max-width: 300px;
-        /* Optional: limit max width */
     }
 
     .service-text {
         text-align: center;
-        /* Center text for a balanced look */
     }
 
     .service-item-left h3 {
@@ -1053,23 +1054,18 @@ footer p {
 
     .service-item {
         flex-direction: column;
-        /* Stack elements vertically */
         align-items: center;
         gap: 0px;
     }
 
     .service-item img {
         order: -1;
-        /* Move image to the top */
         width: 100%;
-        /* Full width on mobile */
         max-width: 300px;
-        /* Optional: limit max width */
     }
 
     .service-text {
         text-align: center;
-        /* Center-align text for a balanced look */
     }
 
     .service-item p {
@@ -1089,16 +1085,16 @@ footer p {
     }
 
     .contact-container {
-        grid-template-columns: 1fr; /* Make the container a single column */
+        grid-template-columns: 1fr; 
     }
 
     .contact-info, .contact-form {
-        width: 100%; /* Ensure both sections span the full width */
+        width: 100%; 
     }
 
     .contact-info h2, .contact-info ul {
-        margin-left: 0; /* Reset margins for mobile */
-        text-align: center; /* Center-align text */
+        margin-left: 0; 
+        text-align: center; 
     }
 
     .contact-info h2{
@@ -1110,16 +1106,16 @@ footer p {
     }
 
     .contact-form h2 {
-        text-align: center; /* Center-align the heading */
+        text-align: center; 
         font-size: 2rem;
     }
 
     form {
-        grid-template-columns: 1fr; /* Stack form fields vertically */
+        grid-template-columns: 1fr; 
     }
 
     .form-group {
-        grid-column: span 1; /* Each input field takes up the full width */
+        grid-column: span 1; 
     }
 
     .form-group.full-width {
@@ -1127,11 +1123,11 @@ footer p {
     }
 
     form button {
-        justify-content: center; /* Center-align the submit button */
+        justify-content: center; 
     }
 
     .contact {
-        padding: 20px; /* Adjust padding for smaller screens */
+        padding: 20px; 
     }
 
     .footer-container {

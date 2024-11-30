@@ -39,12 +39,16 @@ const navLinks = document.querySelector('.nav-links');
 hamburger.addEventListener('click', () => {
     if (navLinks.classList.contains('active')) {
         // Slide up (close menu)
-        navLinks.style.maxHeight = '0';
+        navLinks.style.height = '0';
     } else {
         // Slide down (open menu)
-        navLinks.style.maxHeight = '100%'; // Ensure full height visibility
+        const totalHeight = [...navLinks.children].reduce(
+            (total, child) => total + child.offsetHeight,
+            0
+        );
+        navLinks.style.height = `${totalHeight}px`;
     }
-    navLinks.classList.toggle('active'); // Toggle active class for visibility
+    navLinks.classList.toggle('active'); // Toggle active class
     hamburger.classList.toggle('open'); // Toggle hamburger animation
 });
 

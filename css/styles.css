@@ -1,8 +1,12 @@
 .wrapper {
-    width: 90%; /* Makes the content fit nicely within the screen */
-    max-width: 1200px; /* Prevents excessive stretching on larger screens */
-    margin: 0 auto; /* Center the wrapper */
-    padding: 0 10px; /* Add padding for small devices */
+    width: 90%;
+    /* Makes the content fit nicely within the screen */
+    max-width: 1200px;
+    /* Prevents excessive stretching on larger screens */
+    margin: 0 auto;
+    /* Center the wrapper */
+    padding: 0 10px;
+    /* Add padding for small devices */
 }
 
 html {
@@ -203,10 +207,14 @@ nav {
 
 .service-item img,
 .service-item-left img {
-    width: 300px; /* Fixed width */
-    height: 200px; /* Fixed height */
-    margin-top: 20px; /* Space above the image */
-    object-fit: cover; /* Ensures image fills the dimensions without distortion */
+    width: 300px;
+    /* Fixed width */
+    height: 200px;
+    /* Fixed height */
+    margin-top: 20px;
+    /* Space above the image */
+    object-fit: cover;
+    /* Ensures image fills the dimensions without distortion */
 }
 
 .service-item h3 {
@@ -724,29 +732,29 @@ footer p {
         gap: 150px;
     }
 
-    .hero{
+    .hero {
         height: 500px;
     }
 
-    .hero-logo img{
+    .hero-logo img {
         width: 300px;
         height: 300px;
     }
 
-    .about{
+    .about {
         margin-top: 0;
     }
 
-    .about-content img{
+    .about-content img {
         width: 35%;
         margin-top: 5%;
     }
 
-    .about-text p{
+    .about-text p {
         font-size: 0.8rem;
     }
 
-    .services h2{
+    .services h2 {
         margin-bottom: 0;
     }
 
@@ -763,7 +771,7 @@ footer p {
         font-size: 0.8rem;
     }
 
-    .service-item{
+    .service-item {
         gap: 0;
     }
 
@@ -776,19 +784,19 @@ footer p {
         font-size: 0.8rem;
     }
 
-    .gallery{
+    .gallery {
         height: 800px;
     }
 
-    .contact-info h2{
+    .contact-info h2 {
         margin-left: 30px;
     }
 
-    .contact-info ul{
+    .contact-info ul {
         margin-left: 30px;
     }
 
-    .opening-hours{
+    .opening-hours {
         gap: 10px 15px;
     }
 }
@@ -796,10 +804,12 @@ footer p {
 @media(max-width: 900px) {
     .slider {
         position: absolute;
-        inset: 40px 40px 200px 40px;
+        inset: 40px 40px 120px 40px;
+        width: auto;
+        height: 300px;
     }
 
-    .slider .slides{
+    .slider .slides {
         width: 100px;
         height: 100px;
         top: initial;
@@ -856,29 +866,39 @@ footer p {
 
     .nav-links {
         display: flex;
-        flex-direction: column; /* Stack links vertically */
+        flex-direction: column;
+        /* Stack links vertically */
         position: absolute;
-        top: 60px; /* Position below the header */
+        top: 60px;
+        /* Position below the header */
         right: 0;
         background-color: #231E20;
         width: 100%;
         padding: 0;
-        overflow: hidden; /* Hide overflowing content */
-        height: 0; /* Start hidden */
-        transition: height 0.5s ease-in-out; /* Smooth slide-in/out animation */
-        z-index: 100; /* Ensure it is above other content */
+        overflow: hidden;
+        /* Hide overflowing content */
+        height: 0;
+        /* Start hidden */
+        transition: height 0.5s ease-in-out;
+        /* Smooth slide-in/out animation */
+        z-index: 100;
+        /* Ensure it is above other content */
     }
-    
+
     .nav-links.active {
-        height: auto; /* Dynamically adjust to fit all content */
-        padding: 10px 0; /* Add padding when active */
+        height: auto;
+        /* Dynamically adjust to fit all content */
+        padding: 10px 0;
+        /* Add padding when active */
     }
-    
+
     .nav-links li {
-        text-align: center; /* Center-align links */
-        padding: 10px 0; /* Add space between links */
+        text-align: center;
+        /* Center-align links */
+        padding: 10px 0;
+        /* Add space between links */
     }
-    
+
     .nav-links a {
         text-decoration: none;
         color: #F0F0F0;
@@ -886,73 +906,76 @@ footer p {
         font-weight: 500;
         transition: color 0.3s ease;
     }
-    
+
     .nav-links a:hover {
-        color: #C2915F; /* Change color on hover */
+        color: #C2915F;
+        /* Change color on hover */
     }
-    
+
     .hamburger {
-        display: flex; /* Show hamburger menu */
+        display: flex;
+        /* Show hamburger menu */
         flex-direction: column;
         cursor: pointer;
         gap: 5px;
     }
-    
+
     .hamburger span {
         width: 25px;
         height: 3px;
         background: #595556;
         transition: all 0.3s;
     }
-    
+
     /* Hamburger Animation */
     .hamburger.open span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
-    
+
     .hamburger.open span:nth-child(2) {
-        opacity: 0; /* Hide middle line */
+        opacity: 0;
+        /* Hide middle line */
     }
-    
+
     .hamburger.open span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
-    }    
+    }
 
-    .hero{
+    .hero {
         height: 200px;
     }
 
-    .hero-logo img{
+    .hero-logo img {
         width: 100px;
         height: 100px;
     }
 
-    .about{
+    .about {
         margin-top: 0;
     }
 
     .about-content {
         flex-direction: column;
-        align-items: center; 
-        gap: 20px; 
+        align-items: center;
+        gap: 20px;
     }
 
     .about-text {
-        max-width: 90%; 
-        margin-left: 0; 
-        text-align: center; 
+        max-width: 90%;
+        margin-left: 0;
+        text-align: center;
     }
 
     .about-content img {
-        width: 80%; 
-        margin-right: 0; 
-    } 
+        width: 80%;
+        margin-right: 0;
+    }
 
-    .about-text h2{
+    .about-text h2 {
         font-size: 2.3rem;
     }
 
-    .about-text p{
+    .about-text p {
         font-size: 0.7rem;
     }
 
@@ -1003,24 +1026,26 @@ footer p {
         opacity: 0;
     }
 
-    .contact{
+    .contact {
         margin-top: 20%;
     }
 
     .contact-container {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 
-    .contact-info, .contact-form {
-        width: 100%; 
+    .contact-info,
+    .contact-form {
+        width: 100%;
     }
 
-    .contact-info h2, .contact-info ul {
-        margin-left: 0; 
-        text-align: center; 
+    .contact-info h2,
+    .contact-info ul {
+        margin-left: 0;
+        text-align: center;
     }
 
-    .contact-info h2{
+    .contact-info h2 {
         font-size: 2rem;
     }
 
@@ -1029,16 +1054,16 @@ footer p {
     }
 
     .contact-form h2 {
-        text-align: center; 
+        text-align: center;
         font-size: 2rem;
     }
 
     form {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 
     .form-group {
-        grid-column: span 1; 
+        grid-column: span 1;
     }
 
     .form-group.full-width {
@@ -1046,11 +1071,11 @@ footer p {
     }
 
     form button {
-        justify-content: center; 
+        justify-content: center;
     }
 
     .contact {
-        padding: 20px; 
+        padding: 20px;
     }
 
     .footer-container {

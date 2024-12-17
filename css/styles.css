@@ -988,6 +988,10 @@ footer p {
         font-size: 0.7rem;
     }
 
+    .services h2 {
+        font-size: 2.3rem;
+    }
+
     .service-item-left {
         flex-direction: column;
         align-items: center;
@@ -996,7 +1000,7 @@ footer p {
 
     .service-item-left img {
         width: 100%;
-        max-width: 300px;
+        height: auto;
     }
 
     .service-text {
@@ -1016,7 +1020,7 @@ footer p {
     .service-item img {
         order: -1;
         width: 100%;
-        max-width: 300px;
+        height: auto;
     }
 
     .service-text {
@@ -1029,6 +1033,19 @@ footer p {
 
     .service-item h3 {
         text-align: center;
+    }
+
+    .gallery h2 {
+        font-size: 2.3rem;
+    }
+
+    .gallery .container {
+        height: 70vh;
+        margin-top: 0px;
+    }
+
+    .slider .slides:nth-child(3), .slider .slides:nth-child(4), .slider .slides:nth-child(5) {
+        margin-left: 7%;
     }
 
     .slider .slides:nth-child(6) {
@@ -1060,6 +1077,11 @@ footer p {
 
     .contact-info ul {
         padding: 25px;
+        justify-items: center;
+    }
+
+    .contact-info li {
+        font-size: 0.9rem;
     }
 
     .contact-form h2 {

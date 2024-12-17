@@ -272,7 +272,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -75px;
+    margin-top: -150px;
 }
 
 .container h2 {
@@ -976,7 +976,7 @@ footer p {
     }
 
     .about-content img {
-        width: 80%;
+        width: 90%;
         margin-right: 0;
     }
 

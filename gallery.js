@@ -30,15 +30,24 @@ function scrollToTop() {
         behavior: "smooth"
     });
 }
-
 // Select elements
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
+const navLinksItems = document.querySelectorAll('.nav-links a'); // Select all nav links
 
 // Toggle dropdown menu
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     hamburger.classList.toggle('open');
+});
+
+// Close the menu when a nav link is clicked
+navLinksItems.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active'); // Remove active class
+        hamburger.classList.remove('open'); // Reset hamburger animation
+        navLinks.style.height = '0'; // Collapse the menu with animation
+    });
 });
 
 document.getElementById("contactForm").addEventListener("submit", function(event) {

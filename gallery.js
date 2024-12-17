@@ -35,23 +35,11 @@ function scrollToTop() {
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-// Add click event listener
+// Toggle dropdown menu
 hamburger.addEventListener('click', () => {
-    if (navLinks.classList.contains('active')) {
-        // Slide up (close menu)
-        navLinks.style.height = '0';
-    } else {
-        // Slide down (open menu)
-        const totalHeight = [...navLinks.children].reduce(
-            (total, child) => total + child.offsetHeight,
-            0
-        );
-        navLinks.style.height = `${totalHeight}px`;
-    }
-    navLinks.classList.toggle('active'); // Toggle active class
-    hamburger.classList.toggle('open'); // Toggle hamburger animation
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('open');
 });
-
 
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent immediate submission to show the modal first

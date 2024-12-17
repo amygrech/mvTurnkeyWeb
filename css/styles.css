@@ -172,7 +172,8 @@ nav {
 }
 
 .about-content img {
-    width: 30%;
+    width: 375px;
+    height: 500px;
     margin-top: 2%;
     margin-right: 5%;
     padding: 10px;
@@ -864,39 +865,46 @@ footer p {
         height: 50px;
     }
 
+    /* Default hidden state */
     .nav-links {
         display: flex;
         flex-direction: column;
-        /* Stack links vertically */
         position: absolute;
         top: 60px;
-        /* Position below the header */
         right: 0;
         background-color: #231E20;
         width: 100%;
         padding: 0;
+        max-height: 0;
+        /* Initial hidden state */
+        opacity: 0;
+        /* Hide visually */
+        transform: translateY(-10px);
+        /* Move menu slightly up */
         overflow: hidden;
-        /* Hide overflowing content */
-        height: 0;
-        /* Start hidden */
-        transition: height 0.5s ease-in-out;
-        /* Smooth slide-in/out animation */
-        z-index: 100;
-        /* Ensure it is above other content */
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        z-index: 999;
     }
 
+    /* Active state: menu slides down */
     .nav-links.active {
-        height: auto;
-        /* Dynamically adjust to fit all content */
+        max-height: 700px;
+        /* Large enough value for all links */
+        opacity: 1;
+        /* Fully visible */
+        transform: translateY(0);
+        /* Return to normal position */
         padding: 10px 0;
-        /* Add padding when active */
+        /* Adjust padding for links */
     }
 
+    /* Nav Links Style */
     .nav-links li {
         text-align: center;
-        /* Center-align links */
+        border-bottom: 1px solid #444;
+        /* Add spacing line */
         padding: 10px 0;
-        /* Add space between links */
+        /* Adjust padding for spacing */
     }
 
     .nav-links a {
@@ -909,12 +917,12 @@ footer p {
 
     .nav-links a:hover {
         color: #C2915F;
-        /* Change color on hover */
+        /* Change on hover */
     }
 
+    /* Hamburger Menu */
     .hamburger {
         display: flex;
-        /* Show hamburger menu */
         flex-direction: column;
         cursor: pointer;
         gap: 5px;
@@ -934,12 +942,13 @@ footer p {
 
     .hamburger.open span:nth-child(2) {
         opacity: 0;
-        /* Hide middle line */
+        /* Hide middle bar */
     }
 
     .hamburger.open span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
+
 
     .hero {
         height: 200px;

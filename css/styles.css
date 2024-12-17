@@ -1044,10 +1044,6 @@ footer p {
         margin-top: 0px;
     }
 
-    .slider .slides:nth-child(3), .slider .slides:nth-child(4), .slider .slides:nth-child(5) {
-        margin-left: 7%;
-    }
-
     .slider .slides:nth-child(6) {
         opacity: 0;
     }

@@ -55,12 +55,18 @@ hamburger.addEventListener('click', () => {
 // Close the menu when a nav link is clicked
 navLinksItems.forEach(link => {
     link.addEventListener('click', () => {
+        navLinks.style.height = '0'; // Collapse the menu with animation
         navLinks.classList.remove('active'); // Remove active class
         hamburger.classList.remove('open'); // Reset hamburger animation
-        navLinks.style.height = '0'; // Collapse the menu with animation
     });
 });
 
+// Reset height when the menu is reopened
+navLinks.addEventListener('transitionend', () => {
+    if (!navLinks.classList.contains('active')) {
+        navLinks.style.height = ''; // Reset height to allow recalculation
+    }
+});
 
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent immediate submission to show the modal first

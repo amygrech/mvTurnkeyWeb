@@ -35,37 +35,19 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const navLinksItems = document.querySelectorAll('.nav-links a'); // Select all nav links
 
-// Toggle dropdown menu when the hamburger is clicked
+// Toggle dropdown menu
 hamburger.addEventListener('click', () => {
-    if (navLinks.classList.contains('active')) {
-        // If menu is open, close it
-        navLinks.style.height = '0';
-    } else {
-        // If menu is closed, calculate total height and open it
-        const totalHeight = [...navLinks.children].reduce(
-            (total, child) => total + child.offsetHeight,
-            0
-        );
-        navLinks.style.height = `${totalHeight}px`;
-    }
-    navLinks.classList.toggle('active'); // Toggle active class
-    hamburger.classList.toggle('open'); // Toggle hamburger animation
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('open');
 });
 
 // Close the menu when a nav link is clicked
 navLinksItems.forEach(link => {
     link.addEventListener('click', () => {
-        navLinks.style.height = '0'; // Collapse the menu with animation
         navLinks.classList.remove('active'); // Remove active class
         hamburger.classList.remove('open'); // Reset hamburger animation
+        navLinks.style.height = '0'; // Collapse the menu with animation
     });
-});
-
-// Reset height when the menu is reopened
-navLinks.addEventListener('transitionend', () => {
-    if (!navLinks.classList.contains('active')) {
-        navLinks.style.height = ''; // Reset height to allow recalculation
-    }
 });
 
 document.getElementById("contactForm").addEventListener("submit", function(event) {

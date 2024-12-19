@@ -35,10 +35,21 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const navLinksItems = document.querySelectorAll('.nav-links a'); // Select all nav links
 
-// Toggle dropdown menu
+// Toggle dropdown menu when the hamburger is clicked
 hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('open');
+    if (navLinks.classList.contains('active')) {
+        // If menu is open, close it
+        navLinks.style.height = '0';
+    } else {
+        // If menu is closed, calculate total height and open it
+        const totalHeight = [...navLinks.children].reduce(
+            (total, child) => total + child.offsetHeight,
+            0
+        );
+        navLinks.style.height = `${totalHeight}px`;
+    }
+    navLinks.classList.toggle('active'); // Toggle active class
+    hamburger.classList.toggle('open'); // Toggle hamburger animation
 });
 
 // Close the menu when a nav link is clicked
@@ -49,6 +60,7 @@ navLinksItems.forEach(link => {
         navLinks.style.height = '0'; // Collapse the menu with animation
     });
 });
+
 
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent immediate submission to show the modal first

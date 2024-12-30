@@ -72,7 +72,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #F0F0F0;
+    color: #595556;
     font-size: 1rem;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -396,6 +396,87 @@ nav {
     background-size: cover;
     opacity: 0;
 }
+
+.slider .slides:nth-child(17) {
+    left: calc(50% + 2980px);
+    background-size: cover;
+}
+
+.slider .slides:nth-child(18) {
+    left: calc(50% + 3165px);
+    background-size: cover;
+}
+
+.slider .slides:nth-child(19) {
+    left: calc(50% + 3350px);
+    background-size: cover;
+}
+
+.slider .slides:nth-child(20) {
+    left: calc(50% + 3535px);
+    background-size: cover;
+}
+
+.slider .slides:nth-child(21) {
+    left: calc(50% + 3720px);
+    background-size: cover;
+}
+
+.slider .slides:nth-child(22) {
+    left: calc(50% + 3905px);
+    background-size: cover;
+}
+
+.slider .slides:nth-child(23) {
+    left: calc(50% + 4090px);
+    background-size: cover;
+}
+
+.slider .slides:nth-child(24) {
+    left: calc(50% + 4275px);
+    background-size: cover;
+}
+
+.slider .slides:nth-child(25) {
+    left: calc(50% + 4460px);
+    background-size: cover;
+}
+
+.slider .slides:nth-child(26) {
+    left: calc(50% + 4645px);
+    background-size: cover;
+}
+
+.slider .slides:nth-child(27) {
+    left: calc(50% + 4830px);
+    background-size: cover;
+}
+
+.slider .slides:nth-child(28) {
+    left: calc(50% + 5015px);
+    background-size: cover;
+}
+
+.slider .slides:nth-child(29) {
+    left: calc(50% + 5200px);
+    background-size: cover;
+}
+
+.slider .slides:nth-child(30) {
+    left: calc(50% + 5385px);
+    background-size: cover;
+}
+
+.slider .slides:nth-child(31) {
+    left: calc(50% + 5570px);
+    background-size: cover;
+}
+
+.slider .slides:nth-child(32) {
+    left: calc(50% + 5755px);
+    background-size: cover;
+    opacity: 0;
+} 
 
 .buttons {
     position: absolute;

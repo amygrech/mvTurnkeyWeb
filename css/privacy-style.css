@@ -10,10 +10,18 @@ body {
     background-color: #231E20;
     color: #F0F0F0;
 }
-
-h1,
-h2 {
+h1 {
     text-align: center;
+    padding: 10px 0;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 3rem;
+    color: #F0F0F0;
+}
+
+h2 {
+    text-align: left;
     padding: 10px 0;
     font-family: neue-haas-grotesk-display, sans-serif;
     font-style: normal;
@@ -49,6 +57,10 @@ nav {
 
 p {
     margin: 10px 0;
+}
+
+p a{
+    color: #C2915F;
 }
 
 ul {

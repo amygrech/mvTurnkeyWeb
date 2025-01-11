@@ -31,24 +31,30 @@ function scrollToTop() {
     });
 }
 
-// Select elements
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
-const navLinksItems = document.querySelectorAll('.nav-links a'); // Select all nav links
+const navLinksItems = document.querySelectorAll('.nav-links a');
 
-// Toggle dropdown menu
 hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('open');
+  // If the menu is closed, open it by setting height to scrollHeight
+  if (!navLinks.classList.contains('active')) {
+    navLinks.classList.add('active');
+    hamburger.classList.add('open');
+    navLinks.style.height = navLinks.scrollHeight + 'px'; 
+  } else {
+    // If it’s open, close it
+    navLinks.classList.remove('active');
+    hamburger.classList.remove('open');
+    navLinks.style.height = '0';
+  }
 });
 
-// Close the menu when a nav link is clicked
 navLinksItems.forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active'); // Remove active class
-        hamburger.classList.remove('open'); // Reset hamburger animation
-        navLinks.style.height = '0'; // Collapse the menu with animation
-    });
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    hamburger.classList.remove('open');
+    navLinks.style.height = '0';
+  });
 });
 
 document.getElementById("contactForm").addEventListener("submit", function(event) {
